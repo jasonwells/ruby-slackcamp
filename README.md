@@ -40,7 +40,7 @@ This is the team you want to link with your Basecamp account
 $ crontab -e
 
 # run slackcamp, send basecamp activity to slack
-*/1 * * * * ruby /slackcamp/slackcamp.rb
+*/1 * * * * ruby /ruby-slackcamp/slackcamp.rb
 ```
 
 ## Notes
@@ -50,4 +50,5 @@ slackcamp also relies on the accuracy of Ruby's `Time.now` and related functions
 
 ## Thanks
 [jamescarlos / slackcamp](https://github.com/jamescarlos/slackcamp) - Orignal PHP implementaion of slackcamp
+
 [birarda / logan](https://github.com/birarda/logan) - Ruby implementation of the Basecamp 2 API
