@@ -1,5 +1,7 @@
 # Ruby Slackcamp
 
+[![Dependency Status](https://gemnasium.com/jasonwells/ruby-slackcamp.svg)](https://gemnasium.com/jasonwells/ruby-slackcamp)
+
 Ruby port of [slackcamp](https://github.com/jamescarlos/slackcamp), a simple cron job written in Ruby which finds new activity from [Basecamp](http://basecamp.com) and posts it to a specified [Slack](http://slack.com) channel.
 
 ## Requirements
