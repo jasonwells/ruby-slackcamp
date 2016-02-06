@@ -56,7 +56,7 @@ begin
   if File.exist?(last_run_filename)
     last_run_date = Time.parse(File.read(last_run_filename))
   else
-    last_run_date = Time.now - 2 * 24 * 60 * 60
+    last_run_date = Time.now
     save_last_run_date = true
   end
   since = ExtTime.new(last_run_date)
