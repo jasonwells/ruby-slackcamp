@@ -45,11 +45,11 @@ def slack_notify(message, channel, attachment)
   puts "message sent to #{channel}"
 end
 
-@settings = YAML::load_file(File.expand_path('config/settings.yml'))
+@settings = YAML::load_file(File.expand_path('../config/settings.yml', __FILE__))
 
 begin
   # last run file name
-  last_run_filename = File.expand_path('last_run_date.txt')
+  last_run_filename = File.expand_path('../last_run_date.txt', __FILE__)
   save_last_run_date = false
 
   # set the default last run date
@@ -71,7 +71,7 @@ begin
     },
     'ruby-slackcamp'
   )
-  
+
   # get the events and reverse them to send the older events first
   events = service.events(since)
   events = events.reverse if events
