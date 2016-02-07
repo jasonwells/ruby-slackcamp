@@ -94,7 +94,7 @@ begin
 
     # see if a specific slack channel is set for notifications
     channel = @settings['SLACK_DEFAULT_CHANNEL']
-    channel = @settings['SLACK_CHANNELS'][raw_event['bucket']['name']] if @settings['SLACK_CHANNELS'][raw_event['bucket']['name']]
+    channel = @settings['SLACK_CHANNELS'][raw_event['bucket']['name']] if @settings['SLACK_CHANNELS'] and @settings['SLACK_CHANNELS'][raw_event['bucket']['name']]
 
     # send the slack message
     slack_notify(message, channel, attachment) if channel
